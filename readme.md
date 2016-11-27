@@ -9,10 +9,9 @@ simple demo of stormpath's usage:
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config['SECRET_KEY'] = 'secret'
-app.config['STORMPATH_API_KEY_FILE'] = 'apiKey.properties'
-app.config['STORMPATH_APPLICATION'] = 'flaskr'
 
-stormpath_manager = StormpathManager(app)
+
+
 @app.route('/')
 def show_posts():
 
