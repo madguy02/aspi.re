@@ -3,12 +3,13 @@ from sqlalchemy import create_engine, MetaData
 from flask.ext.login import UserMixin, LoginManager, \
     login_user, logout_user
 from flask.ext.blogging import SQLAStorage, BloggingEngine
+import github
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret"  
 app.config["BLOGGING_URL_PREFIX"] = "/blog"
 app.config["BLOGGING_DISQUS_SITENAME"] = "test"
-app.config["BLOGGING_SITEURL"] = "http://0.0.0.0:8000"
+app.config["BLOGGING_SITEURL"] = "http://0.0.0.0:5000"
 
 # extensions
 engine = create_engine('sqlite:////tmp/blog.db')
@@ -65,4 +66,4 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000, use_reloader=False)
+    app.run(debug=True, port=5000, use_reloader=False)

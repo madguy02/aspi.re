@@ -5,6 +5,7 @@ from flask_github import GitHub
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+#import app
 
 DATABASE_URI = 'sqlite:////tmp/github-flask.db'
 SECRET_KEY = 'development key'
